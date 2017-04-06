@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tm_zABrxEeefU8qr_N_8fA" name="NewModel">
+  <packagedElement xmi:type="uml:Association" xmi:id="_S1DZgBr8EeefU8qr_N_8fA" memberEnd="_S1DZgRr8EeefU8qr_N_8fA _S1DZhBr8EeefU8qr_N_8fA" navigableOwnedEnd="_S1DZhBr8EeefU8qr_N_8fA">
+    <ownedEnd xmi:id="_S1DZgRr8EeefU8qr_N_8fA" name="airTrafficControllerNJs" type="_uNOy8Br5EeefU8qr_N_8fA" association="_S1DZgBr8EeefU8qr_N_8fA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S1DZghr8EeefU8qr_N_8fA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S1DZgxr8EeefU8qr_N_8fA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_S1DZhBr8EeefU8qr_N_8fA" name="airTrafficControllerUSAs" type="_L56QgBr1EeefU8qr_N_8fA" aggregation="composite" association="_S1DZgBr8EeefU8qr_N_8fA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S1DZhRr8EeefU8qr_N_8fA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S1DZhhr8EeefU8qr_N_8fA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jQsskBr8EeefU8qr_N_8fA" name="A_airTrafficControllerCAs_airTrafficControllerUSAs" memberEnd="_jQtToBr8EeefU8qr_N_8fA _jQuhwBr8EeefU8qr_N_8fA" navigableOwnedEnd="_jQuhwBr8EeefU8qr_N_8fA">
+    <ownedEnd xmi:id="_jQtToBr8EeefU8qr_N_8fA" name="airTrafficControllerCAs" type="_oRzLwBr4EeefU8qr_N_8fA" association="_jQsskBr8EeefU8qr_N_8fA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jQt6sBr8EeefU8qr_N_8fA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jQt6sRr8EeefU8qr_N_8fA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_jQuhwBr8EeefU8qr_N_8fA" name="airTrafficControllerUSAs" type="_L56QgBr1EeefU8qr_N_8fA" aggregation="composite" association="_jQsskBr8EeefU8qr_N_8fA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jQvI0Br8EeefU8qr_N_8fA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jQvI0Rr8EeefU8qr_N_8fA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_L-8EABsBEeefU8qr_N_8fA" name="Atmosphere.AeroSpace">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_bAvPQBsBEeefU8qr_N_8fA" name="Interface1"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_V9cSUBryEeefU8qr_N_8fA" name="TowerCommunications">
+      <ownedOperation xmi:id="_b1HQUBryEeefU8qr_N_8fA" name="getFlightLocation" isAbstract="true">
+        <ownedParameter xmi:id="_x5bcEBryEeefU8qr_N_8fA" name="Aeroplane"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_jdmrsBryEeefU8qr_N_8fA" name="sendWeatherReportToFlight" isAbstract="true">
+        <ownedParameter xmi:id="_oAFYYBryEeefU8qr_N_8fA" name="Aeroplane"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_7HFecBryEeefU8qr_N_8fA" name="AirTrafficController">
+      <generalization xmi:id="_wJD_wBr0EeefU8qr_N_8fA" general="_V9cSUBryEeefU8qr_N_8fA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_L56QgBr1EeefU8qr_N_8fA" name="AirTrafficControllerUSA">
+      <ownedAttribute xmi:id="_vuqGQBr1EeefU8qr_N_8fA" name="instance" visibility="private" isStatic="true"/>
+      <interfaceRealization xmi:id="_ueLC4BsCEeefU8qr_N_8fA" client="_L56QgBr1EeefU8qr_N_8fA" supplier="_7HFecBryEeefU8qr_N_8fA" contract="_7HFecBryEeefU8qr_N_8fA"/>
+      <ownedOperation xmi:id="_itL0ABr1EeefU8qr_N_8fA" name="getInstance" isStatic="true">
+        <ownedParameter xmi:id="_FTtGoBr3EeefU8qr_N_8fA" name="singletonObject" type="_L56QgBr1EeefU8qr_N_8fA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_zLR-IBr1EeefU8qr_N_8fA" name="AirTrafficControllerUSA" visibility="private" isStatic="true"/>
+      <ownedOperation xmi:id="_wsA0cBr3EeefU8qr_N_8fA" name="getFlightLocation">
+        <ownedParameter xmi:id="_GPoG4Br4EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_bPzVEBr4EeefU8qr_N_8fA" name="sendWeatherReportoFlight">
+        <ownedParameter xmi:id="_fGMX0Br4EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oRzLwBr4EeefU8qr_N_8fA" name="AirTrafficControllerCA">
+      <ownedAttribute xmi:id="_oRzLwRr4EeefU8qr_N_8fA" name="instance" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_-2uxQBr4EeefU8qr_N_8fA" name="master" visibility="private" type="_L56QgBr1EeefU8qr_N_8fA" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-2vYUBr4EeefU8qr_N_8fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-2vYURr4EeefU8qr_N_8fA" value="1"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_WxFNYBsAEeefU8qr_N_8fA" client="_oRzLwBr4EeefU8qr_N_8fA" supplier="_7HFecBryEeefU8qr_N_8fA" contract="_7HFecBryEeefU8qr_N_8fA"/>
+      <ownedOperation xmi:id="_oRzLwhr4EeefU8qr_N_8fA" name="getInstance" isStatic="true">
+        <ownedParameter xmi:id="_oRzLwxr4EeefU8qr_N_8fA" name="singletonObject" type="_oRzLwBr4EeefU8qr_N_8fA" direction="return"/>
+        <ownedParameter xmi:id="_bD4jgBr5EeefU8qr_N_8fA" name="centralController" type="_L56QgBr1EeefU8qr_N_8fA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_oRzLxBr4EeefU8qr_N_8fA" name="AirTrafficControllerCA" visibility="private" isStatic="true"/>
+      <ownedOperation xmi:id="_oRzLxRr4EeefU8qr_N_8fA" name="getFlightLocation">
+        <ownedParameter xmi:id="_oRzLxhr4EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_oRzLxxr4EeefU8qr_N_8fA" name="sendWeatherReportoFlight">
+        <ownedParameter xmi:id="_oRzLyBr4EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uNOy8Br5EeefU8qr_N_8fA" name="AirTrafficControllerNJ">
+      <ownedAttribute xmi:id="_uNOy8Rr5EeefU8qr_N_8fA" name="instance" visibility="private" isStatic="true"/>
+      <ownedAttribute xmi:id="_uNOy8hr5EeefU8qr_N_8fA" name="master" visibility="private" type="_L56QgBr1EeefU8qr_N_8fA" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uNOy8xr5EeefU8qr_N_8fA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uNOy9Br5EeefU8qr_N_8fA" value="1"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_3KX-ABsCEeefU8qr_N_8fA" client="_uNOy8Br5EeefU8qr_N_8fA" supplier="_7HFecBryEeefU8qr_N_8fA" contract="_7HFecBryEeefU8qr_N_8fA"/>
+      <ownedOperation xmi:id="_uNOy9Rr5EeefU8qr_N_8fA" name="getInstance" isStatic="true">
+        <ownedParameter xmi:id="_uNOy9hr5EeefU8qr_N_8fA" name="singletonObject" type="_uNOy8Br5EeefU8qr_N_8fA" direction="return"/>
+        <ownedParameter xmi:id="_uNOy9xr5EeefU8qr_N_8fA" name="centralController" type="_L56QgBr1EeefU8qr_N_8fA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uNOy-Br5EeefU8qr_N_8fA" name="AirTrafficControllerNJ" visibility="private" isStatic="true"/>
+      <ownedOperation xmi:id="_uNOy-Rr5EeefU8qr_N_8fA" name="getFlightLocation">
+        <ownedParameter xmi:id="_uNOy-hr5EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uNOy-xr5EeefU8qr_N_8fA" name="sendWeatherReportoFlight">
+        <ownedParameter xmi:id="_uNOy_Br5EeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_baOJcBsFEeefU8qr_N_8fA" name="Atmosphere.FlyingVehicles">
+    <packagedElement xmi:type="uml:Class" xmi:id="_-ZOLUBr3EeefU8qr_N_8fA" name="Aeroplane">
+      <generalization xmi:id="_HI5iIBsBEeefU8qr_N_8fA" general="_7HFecBryEeefU8qr_N_8fA"/>
+      <ownedAttribute xmi:id="_qnwkQBr9EeefU8qr_N_8fA" name="currentATC" visibility="private" type="_7HFecBryEeefU8qr_N_8fA"/>
+      <ownedOperation xmi:id="_6Tk84Br9EeefU8qr_N_8fA" name="setAirTrafficController">
+        <ownedParameter xmi:id="_9ux4cBr9EeefU8qr_N_8fA" name="objATC" type="_7HFecBryEeefU8qr_N_8fA"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_XqJUoBsGEeefU8qr_N_8fA" name="Atmosphere.SpaceClients">
+    <packagedElement xmi:type="uml:Class" xmi:id="_lHIeMBsGEeefU8qr_N_8fA" name="JetAirways" isActive="true">
+      <ownedAttribute xmi:id="_HUrFkBsHEeefU8qr_N_8fA" name="usa" type="_L56QgBr1EeefU8qr_N_8fA"/>
+      <ownedAttribute xmi:id="_OG_G4BsHEeefU8qr_N_8fA" name="ca" type="_oRzLwBr4EeefU8qr_N_8fA" aggregation="shared"/>
+      <ownedAttribute xmi:id="_mKcf4BsHEeefU8qr_N_8fA" name="nj" type="_uNOy8Br5EeefU8qr_N_8fA"/>
+      <ownedAttribute xmi:id="_TVWMsBsIEeefU8qr_N_8fA" name="plane" type="_-ZOLUBr3EeefU8qr_N_8fA"/>
+      <ownedOperation xmi:id="_r07L4BsGEeefU8qr_N_8fA" name="main" isStatic="true">
+        <ownedParameter xmi:id="_txXqcBsGEeefU8qr_N_8fA" name="main"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZlswcBsIEeefU8qr_N_8fA" name="TakeOff"/>
+      <ownedOperation xmi:id="_cv730BsIEeefU8qr_N_8fA" name="Fly">
+        <ownedParameter xmi:id="_egGN4BsIEeefU8qr_N_8fA" name="To">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_kbJQABsIEeefU8qr_N_8fA" name="From">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_raJpgBsIEeefU8qr_N_8fA" name="Land"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_AlzH4BsJEeefU8qr_N_8fA" client="_lHIeMBsGEeefU8qr_N_8fA" supplier="_L56QgBr1EeefU8qr_N_8fA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ND3yIBsJEeefU8qr_N_8fA" client="_lHIeMBsGEeefU8qr_N_8fA" supplier="_uNOy8Br5EeefU8qr_N_8fA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_32vtEBsIEeefU8qr_N_8fA" client="_XqJUoBsGEeefU8qr_N_8fA" supplier="_-ZOLUBr3EeefU8qr_N_8fA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ITLqUBsJEeefU8qr_N_8fA" client="_lHIeMBsGEeefU8qr_N_8fA" supplier="_oRzLwBr4EeefU8qr_N_8fA"/>
+</uml:Model>
