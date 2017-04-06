@@ -1,4 +1,4 @@
-# CompositionCase
+# CompositionCase_ An Implementation
 
 
 Problem Statement:
@@ -9,12 +9,16 @@ I have thought about  a way to reuse the implemtation code with in a singleton c
 
 This project implents Compostion design pattern between the below 3 singleton classes with out loosing the true single object objective of the singleton class.
 
-The Three singleton classes involved in this project are ....
-   AirTrafficControllerUSA.java
-   AirTrafficControllerNJ.java
-   AirTrafficControllerCA.java
+The Three singleton classes involved in this project are
+
+
+   *AirTrafficControllerUSA.java
+   *AirTrafficControllerNJ.java
+   *AirTrafficControllerCA.java
    
 
 The entire project is handcoded to make the above three singleton classes to make sense in a real world like senario with a need for code reuse between them.
+
+   *https://github.com/ujustcode/CompositionCase/blob/master/ClassDiagram.png
 
     
