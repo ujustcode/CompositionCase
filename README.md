@@ -12,13 +12,13 @@ This project implents Compostion design pattern between the below 3 singleton cl
 The Three singleton classes involved in this project are
 
 
-   *AirTrafficControllerUSA.java
-   *AirTrafficControllerNJ.java
-   *AirTrafficControllerCA.java
+   * AirTrafficControllerUSA.java
+   * AirTrafficControllerNJ.java
+   * AirTrafficControllerCA.java
    
 
 The entire project is handcoded to make the above three singleton classes to make sense in a real world like senario with a need for code reuse between them.
 
-   *https://github.com/ujustcode/CompositionCase/blob/master/ClassDiagram.png
+   * https://github.com/ujustcode/CompositionCase/blob/master/ClassDiagram.png
 
     
